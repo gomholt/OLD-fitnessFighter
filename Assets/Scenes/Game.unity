@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -377,7 +378,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 40
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -407,6 +408,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cb94beca0fdfd4484014e16757d8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &807725213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,7 +597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd7e1e823ea5634da75cd8bae02bf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 2092775162}
 --- !u!114 &2057649123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1dc62463e983c468606a16f1129665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2393779635306886730, guid: a531d3ec917f1404b8bc8d2dca7a9b18, type: 3}
   stringSeed: seed string
   useStringSeed: 0
   seed: 0
@@ -791,7 +806,9 @@ MonoBehaviour:
   rooms: {fileID: 108768910}
   roomMats:
   - {fileID: 2100000, guid: 9293a6acc946adf419cb11b8c84a7c90, type: 2}
-  player: {fileID: 4606134890688892897, guid: 74007d697dc209b4d8308aaa24a14c5e, type: 3}
+  playerPrefab: {fileID: 2393779635306886730, guid: a531d3ec917f1404b8bc8d2dca7a9b18,
+    type: 3}
+  camera: {fileID: 534669906}
 --- !u!4 &2092775161
 Transform:
   m_ObjectHideFlags: 0
