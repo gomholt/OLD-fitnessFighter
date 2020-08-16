@@ -212,6 +212,7 @@ public class CreateMap : MonoBehaviour
             Vector3 roomLocation = new Vector3(room.Key.x * rt.xScale, 0, room.Key.y * rt.yScale);
             newRoom = Instantiate(go, roomLocation, Quaternion.identity);
             rooms.Add(newRoom);
+            //GameManager.SharedInstance.GetComponent<EnemySpawningSystem>().FillRoomWithEnemies(newRoom);
         }
     }
 }

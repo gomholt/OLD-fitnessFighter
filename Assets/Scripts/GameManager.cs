@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    public GameObject player;
     public string stringSeed = "seed string";
     public bool useStringSeed = true;
     public int seed;
@@ -18,7 +19,10 @@ public class GameManager : MonoBehaviour {
     private CreateMap mapCreator;
 
     [SerializeField]
-    GameObject player;
+    GameObject playerPrefab;
+
+    [SerializeField]
+    CameraController camera;
 
     private void Awake()
     {
@@ -60,7 +64,8 @@ public class GameManager : MonoBehaviour {
 
     private void SpawnPlayer()
     {
-        Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
+        player = Instantiate(playerPrefab, new Vector3(0, playerPrefab.transform.localScale.y/2, 0), Quaternion.identity);
+        camera.player = player;
     }
 
 
