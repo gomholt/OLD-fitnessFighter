@@ -14,7 +14,7 @@ public class EnemySpawningSystem : MonoBehaviour
         if (!room.GetComponent<RoomProperties>().clear)
         {
             numberOfEnemies = Random.Range(1, 5);
-            room.GetComponent<RoomProperties>().enemiesInRoom = numberOfEnemies;
+            //room.GetComponent<RoomProperties>().enemiesInRoom = numberOfEnemies;
             enemiesSpawned = 0;
             for (int i = 0; i < numberOfEnemies; i++)
             {

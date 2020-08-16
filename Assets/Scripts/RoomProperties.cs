@@ -15,6 +15,7 @@ public class RoomProperties : MonoBehaviour
 
     public GameObject ground;
 
+    public bool clear;
 
 
 }
